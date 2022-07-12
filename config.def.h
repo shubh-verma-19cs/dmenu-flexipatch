@@ -35,13 +35,13 @@ static char *fonts[] =
 static const char *fonts[] =
 #endif // XRESOURCES_PATCH
 {
-	"monospace:size=10"
+	"VictorMono Nerd Font:size=12"
 };
 #endif // PANGO_PATCH
 #if MANAGED_PATCH
 static char *prompt            = NULL;      /* -p  option; prompt to the left of input field */
 #else
-static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
+static const char *prompt      = "run >";      /* -p  option; prompt to the left of input field */
 #endif // MANAGED_PATCH
 #if DYNAMIC_OPTIONS_PATCH
 static const char *dynamic     = NULL;      /* -dy option; dynamic command to run on input change */
@@ -114,10 +114,10 @@ char *colors[][2] = {
 	#endif // EMOJI_HIGHLIGHT_PATCH
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
-static unsigned int lines      = 0;
+static unsigned int lines      = 10;
 #if GRID_PATCH
 /* -g option; if nonzero, dmenu uses a grid comprised of columns and lines */
-static unsigned int columns    = 0;
+static unsigned int columns    = 4;
 #endif // GRID_PATCH
 #if LINE_HEIGHT_PATCH
 static unsigned int lineheight = 0;         /* -h option; minimum height of a menu line     */
@@ -139,7 +139,7 @@ static const char worddelimiters[] = " ";
 
 #if BORDER_PATCH
 /* Size of the window border */
-static unsigned int border_width = 0;
+static unsigned int border_width = 10;
 #endif // BORDER_PATCH
 
 #if PREFIXCOMPLETION_PATCH
